@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: #ffcc00;
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.about-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2575fc;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #6a11cb;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+.footer {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.footer .btn {
+    background: #ffcc00;
+    color: #333;
+}
+
+.footer .btn:hover {
+    background: #ff9900;
+}
