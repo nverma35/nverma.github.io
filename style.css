@@ -1,11 +1,12 @@
 /* General Styles */
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f7f7f7;
     color: #333;
+    overflow-x: hidden;
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
 
 h1, h2, h3 {
     color: #333;
+    animation: fadeIn 2s ease;
 }
 
 a {
@@ -25,24 +27,32 @@ a {
 
 /* Header Section */
 .header {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    background: url("./WitchingHourGradient.jpg") no-repeat center center/cover;
     color: #fff;
     padding: 100px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
+    animation: slideInFromLeft 1s ease-in-out;
 }
 
 .header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-top: 10px;
+    animation: slideInFromRight 1s ease-in-out;
 }
 
 .highlight {
-    color: #ffcc00;
+    color: #ff8c94;
+    animation: popIn 2s ease-in-out infinite alternate;
+    font-size: 50px;
+    /* font-weight: 700; */
 }
 
 /* About Me Section */
@@ -56,17 +66,24 @@ a {
     flex-wrap: wrap;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     overflow: hidden;
     margin-bottom: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .profile-img {
     border-radius: 50%;
     margin: 20px;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 400px;
+    /* animation: rotateIn 1.5s ease-in-out; */
 }
 
 .about-content {
@@ -75,8 +92,8 @@ a {
 }
 
 .about-content h2 {
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: 600;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -87,14 +104,16 @@ a {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #2575fc;
+    background: #ff8c94;
     border-radius: 30px;
     font-weight: 500;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounce 2s infinite;
 }
 
 .btn:hover {
-    background: #6a11cb;
+    background: #ff6b81;
+    transform: translateY(-5px);
 }
 
 /* Skills Section */
@@ -105,7 +124,7 @@ a {
 }
 
 .skills h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 30px;
 }
 
@@ -117,19 +136,26 @@ a {
 
 .skill {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: fadeIn 2s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .skill h3 {
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 /* Footer Section */
 .footer {
-    background: linear-gradient(to right, #2575fc, #6a11cb);
+    background: linear-gradient(to right, #c2e9fb, #a1c4fd);
     color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -140,10 +166,69 @@ a {
 }
 
 .footer .btn {
-    background: #ffcc00;
+    background: #ffd700;
     color: #333;
 }
 
 .footer .btn:hover {
-    background: #ff9900;
+    background: #ffcc00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
